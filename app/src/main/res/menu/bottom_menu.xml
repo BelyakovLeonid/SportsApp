@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab1Fragment"
+        android:title="Tab1" />
+
+    <item
+        android:id="@+id/tab2Fragment"
+        android:title="Tab2" />
+
+    <item
+        android:id="@+id/tab3Fragment"
+        android:title="Tab3" />
+
+    <item
+        android:id="@+id/tab4Fragment"
+        android:title="Tab4" />
+
+    <item
+        android:id="@+id/tab5Fragment"
+        android:title="Tab5" />
+</menu>

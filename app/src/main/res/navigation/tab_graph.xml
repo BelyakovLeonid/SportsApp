@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_graph.xml"
+    app:startDestination="@id/tab1Fragment">
+
+    <fragment
+        android:id="@+id/tab1Fragment"
+        android:name="com.modo.modo.sportsapp.root.feature1.presentation.Tab1Fragment"
+        android:label="Tab1Fragment" />
+    <fragment
+        android:id="@+id/tab2Fragment"
+        android:name="com.modo.modo.sportsapp.root.feature2.presentation.Tab2Fragment"
+        android:label="Tab2Fragment" />
+    <fragment
+        android:id="@+id/tab3Fragment"
+        android:name="com.modo.modo.sportsapp.root.feature3.presentation.Tab3Fragment"
+        android:label="Tab3Fragment" />
+    <fragment
+        android:id="@+id/tab4Fragment"
+        android:name="com.modo.modo.sportsapp.root.feature4.presentation.Tab4Fragment"
+        android:label="Tab4Fragment" />
+    <fragment
+        android:id="@+id/tab5Fragment"
+        android:name="com.modo.modo.sportsapp.root.feature5.presentation.Tab5Fragment"
+        android:label="Tab5Fragment" />
+</navigation>
