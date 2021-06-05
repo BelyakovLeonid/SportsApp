@@ -17,7 +17,7 @@ data class EventDto(
     val name: String,
     val registrationOver: Boolean,
     val approved: Boolean,
-    val participantStatus: String
+    val participationType: String
 )
 
 fun EventDto.toDomain(): Event {
@@ -29,6 +29,6 @@ fun EventDto.toDomain(): Event {
         imageUrl = imageUrl,
         name = name,
         isRegApproved = approved,
-        participantStatus = ParticipantStatus.getStateFromString(participantStatus)
+        participantStatus = ParticipantStatus.getStateFromString(participationType)
     )
 }

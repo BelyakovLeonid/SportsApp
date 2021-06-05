@@ -10,7 +10,7 @@
         android:label="Tab1Fragment" />
     <fragment
         android:id="@+id/tab2Fragment"
-        android:name="com.modo.modo.sportsapp.feature2.presentation.Tab2Fragment"
+        android:name="com.modo.modo.sportsapp.feature2.presentation.EventsAndActivitiesFragment"
         android:label="Tab2Fragment" />
     <fragment
         android:id="@+id/tab3Fragment"

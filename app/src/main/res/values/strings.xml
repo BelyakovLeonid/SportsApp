@@ -57,4 +57,14 @@
     <string name="detail_you_are_fun">Вы зарегистрированны как спортсмен</string>
 
     <string name="qr_title">Сканирование QR-кода</string>
+
+    <string name="events_title">Мероприятия</string>
+    <string name="events_show_all"><u>Показать все</u></string>
+    <string name="events_activities">Активности</string>
+    <string name="events_are_you_running">Вы сейчас занимаетесь бегом?</string>
+    <string name="events_yes">Всё верно!</string>
+    <string name="events_no">Нет, не угадали, выберу другую активность</string>
+    <string name="activity_run">Бег</string>
+    <string name="activity_bicycle">Езда на велосипеде</string>
+    <string name="activity_strong">Силовые упражнения</string>
 </resources>

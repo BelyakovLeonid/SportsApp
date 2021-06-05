@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/XXLargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/events_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventsList"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:itemCount="2"
+            tools:listitem="@layout/event_item" />
+
+        <TextView
+            android:id="@+id/more"
+            style="@style/SmallTextSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:text="@string/events_show_all"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventsList" />
+
+        <TextView
+            android:id="@+id/activitiesTitle"
+            style="@style/XXLargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/events_activities"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/more" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quessContainer"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPsbAccent1"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activitiesTitle">
+
+            <TextView
+                android:id="@+id/quessTitle"
+                style="@style/LargeText"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="@string/events_are_you_running"
+                app:layout_constraintEnd_toStartOf="@id/guessClose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/guessClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonYes"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/events_yes"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPsbAccent"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quessTitle"
+                app:strokeColor="@color/colorPsbAccent" />
+
+            <TextView
+                android:id="@+id/quessSubtitle"
+                style="@style/NormalTextSecondary"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/events_no"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toEndOf="@id/buttonYes"
+                app:layout_constraintTop_toBottomOf="@id/quessTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/activityRun"
+            style="@style/MediumText"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/activity_background"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/activity_run"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_run"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/activityBicycle"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quessContainer" />
+
+        <TextView
+            android:id="@+id/activityBicycle"
+            style="@style/MediumText"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/activity_background"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/activity_bicycle"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_run"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/activityStrong"
+            app:layout_constraintStart_toEndOf="@id/activityRun"
+            app:layout_constraintTop_toBottomOf="@id/quessContainer" />
+
+        <TextView
+            android:id="@+id/activityStrong"
+            style="@style/MediumText"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/activity_background"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/activity_strong"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_strong"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/activityBicycle"
+            app:layout_constraintTop_toBottomOf="@id/quessContainer" />
+
+        <TextView
+            android:id="@+id/moreActivities"
+            style="@style/SmallTextSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:text="@string/events_show_all"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityRun" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
