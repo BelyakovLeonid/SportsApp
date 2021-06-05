@@ -14,7 +14,7 @@ class EventDetailViewModel(
 ) : ViewModel() {
 
     private val _content = MutableStateFlow<EventUiModel?>(null)
-    private val content: Flow<EventUiModel> = _content.filterNotNull()
+    val content: Flow<EventUiModel> = _content.filterNotNull()
 
     init {
         _content.value = repository.getEvent(eventId)?.toUi()

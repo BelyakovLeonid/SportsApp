@@ -10,7 +10,8 @@ data class EventUiModel(
     val userStatus: ParticipantStatus,
     val date: String?,
     val isNearest: Boolean,
-    //    val isOpen: Boolean
+    val description: String,
+    val isOpen: Boolean
 )
 
 fun Event.toUi(index: Int = 0): EventUiModel {
@@ -20,6 +21,8 @@ fun Event.toUi(index: Int = 0): EventUiModel {
         address = address,
         userStatus = ParticipantStatus.SPORTSMEN,
         date = date?.formatToString(),
-        isNearest = index < 2
+        isNearest = index < 2,
+        description = "", //todo
+        isOpen = index == 0
     )
 }
