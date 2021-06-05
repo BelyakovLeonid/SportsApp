@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_nav"
         android:layout_gravity="bottom"
+        android:background="@color/grayUltraLight"
         android:elevation="12dp"
         app:itemRippleColor="@null"
         app:itemTextAppearanceActive="@style/TabTextActive"

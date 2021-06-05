@@ -6,4 +6,7 @@
 
     <dimen name="barcode_box_stroke_width">4dp</dimen>
     <dimen name="barcode_box_corner_radius">8dp</dimen>
+
+    <dimen name="decorator_offset">10dp</dimen>
+    <dimen name="decorator_text_size">22dp</dimen>
 </resources>

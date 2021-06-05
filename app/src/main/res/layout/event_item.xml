@@ -10,10 +10,12 @@
         android:id="@+id/activeLabel"
         style="@style/NormalText"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:background="@color/colorPsbAccent1"
         android:padding="5dp"
         android:text="@string/events_open"
+        tools:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,12 +24,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_search_background"
         android:padding="15dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/activeLabel"
-        tools:visibility="visible">
+        app:layout_constraintTop_toBottomOf="@id/activeLabel">
 
         <TextView
             android:id="@+id/timeText"

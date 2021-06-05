@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.modo.modo.sportsapp.databinding.EventItemBinding
-import com.modo.modo.sportsapp.myevents.presentation.models.EventUiModel
+import com.modo.modo.sportsapp.myevents.presentation.model.EventUiModel
 
 class EventsAdapter(
     private val onItemClick: (EventUiModel) -> Unit
@@ -29,11 +29,11 @@ class ItemViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: EventUiModel, onItemClick: (EventUiModel) -> Unit) = with(binding) {
-        activeLabel.isVisible = item.isOpen
+        activeLabel.isVisible = item.isNearest
         name.text = item.name
         role.text = "ds exfcnbreb."
         timeText.text = item.date
-        place.text = item.place
+        place.text = item.address
         root.setOnClickListener {
             onItemClick.invoke(item)
         }

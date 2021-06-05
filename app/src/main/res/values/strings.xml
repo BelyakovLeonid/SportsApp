@@ -33,7 +33,7 @@
     <string name="gadgets_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
     <string name="gadgets_next">Далее ¬</string>
     <string name="tab_my_events">Планы</string>
-    <string name="tab_activity">Активность</string>
+    <string name="tab_activity">События</string>
     <string name="tab_news">Лента</string>
     <string name="tab_gifts">Призы</string>
     <string name="tab_profile">ЛК</string>
