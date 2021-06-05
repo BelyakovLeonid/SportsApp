@@ -15,4 +15,8 @@ class EventsRepository(
             cachedEvents = it
         }
     }
+
+    fun getEvent(eventId: String): Event? {
+        return cachedEvents.find { it.id == eventId }
+    }
 }

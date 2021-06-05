@@ -13,7 +13,7 @@ data class EventUiModel(
     //    val isOpen: Boolean
 )
 
-fun Event.toUi(index: Int): EventUiModel {
+fun Event.toUi(index: Int = 0): EventUiModel {
     return EventUiModel(
         id = id,
         name = name,

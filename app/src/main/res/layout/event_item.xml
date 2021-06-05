@@ -21,6 +21,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0px"
+        android:clickable="true"
+        android:id="@+id/container"
+        android:foreground="?attr/selectableItemBackground"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_search_background"
         android:padding="15dp"

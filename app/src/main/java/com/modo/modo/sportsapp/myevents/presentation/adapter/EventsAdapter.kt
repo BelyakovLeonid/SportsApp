@@ -34,7 +34,7 @@ class ItemViewHolder(
         role.text = "ds exfcnbreb."
         timeText.text = item.date
         place.text = item.address
-        root.setOnClickListener {
+        container.setOnClickListener {
             onItemClick.invoke(item)
         }
         //todo
