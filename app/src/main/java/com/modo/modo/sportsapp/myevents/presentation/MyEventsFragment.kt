@@ -13,7 +13,7 @@ import com.modo.modo.sportsapp.databinding.FragmentMyEventsBinding
 import com.modo.modo.sportsapp.events.presentation.EventDetailFragment
 import com.modo.modo.sportsapp.myevents.presentation.adapter.EventsAdapter
 import com.modo.modo.sportsapp.myevents.presentation.adapter.EventsItemsDecorator
-import com.modo.modo.sportsapp.myevents.presentation.model.EventUiModel
+import com.modo.modo.sportsapp.myevents.presentation.model.EventItem
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MyEventsFragment : Fragment(R.layout.fragment_my_events) {
@@ -45,9 +45,6 @@ class MyEventsFragment : Fragment(R.layout.fragment_my_events) {
     private fun observeData() {
         observeFlow(viewModel.content) {
             eventsAdapter.submitList(it)
-            val hasContent = !it.isNullOrEmpty()
-            binding.eventsList.isVisible = hasContent
-            binding.placeholder.isVisible = !hasContent
         }
     }
 
@@ -56,7 +53,7 @@ class MyEventsFragment : Fragment(R.layout.fragment_my_events) {
         eventsList.addItemDecoration(decorator)
     }
 
-    private fun openEventDetail(event: EventUiModel) {
+    private fun openEventDetail(event: EventItem.EventUiModel) {
         Navigation.findNavController(requireActivity(), R.id.activityContent)
             .navigate(
                 R.id.eventDetailFragment,

@@ -47,6 +47,7 @@
 
     <string name="events_open">Регистрация открыта!</string>
     <string name="events_more"><u>Подробнее</u></string>
+    <string name="events_empty">Тут пока пусто, добавляй события на вкладке <b>События</b></string>
     <string name="events_role_sport">ваша роль <b>спортсмен</b></string>
     <string name="events_role_fan">ваша роль <b>болельщик</b></string>
 
