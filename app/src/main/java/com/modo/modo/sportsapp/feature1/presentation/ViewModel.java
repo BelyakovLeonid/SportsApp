@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.root.feature1.presentation;
+package com.modo.modo.sportsapp.feature1.presentation;
 
 import android.app.Application;
 import android.util.Log;
