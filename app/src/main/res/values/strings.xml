@@ -32,4 +32,21 @@
     <string name="gadgets_button">Подключить!</string>
     <string name="gadgets_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
     <string name="gadgets_next">Далее ¬</string>
+    <string name="tab_my_events">Планы</string>
+    <string name="tab_activity">Активность</string>
+    <string name="tab_news">Лента</string>
+    <string name="tab_gifts">Призы</string>
+    <string name="tab_profile">ЛК</string>
+
+    <string name="my_events_search">Поиск</string>
+    <string name="my_events_done">Выполненные</string>
+    <string name="my_events_calendar">Календарь</string>
+    <string name="my_events_fav">Избранное</string>
+    <string name="my_events_nearest">Ближайшие события</string>
+    <string name="my_events_next">Будущие мероприятия</string>
+
+    <string name="events_open">Регистрация открыта!</string>
+    <string name="events_more"><u>Подробнее</u></string>
+    <string name="events_role_sport">ваша роль <b>спортсмен</b></string>
+    <string name="events_role_fan">ваша роль <b>болельщик</b></string>
 </resources>

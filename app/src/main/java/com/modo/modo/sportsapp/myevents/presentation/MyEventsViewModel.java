@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.feature1.presentation;
+package com.modo.modo.sportsapp.myevents.presentation;
 
 import android.app.Application;
 import android.util.Log;
@@ -12,13 +12,13 @@ import com.modo.modo.sportsapp.feature1.data.Feature1Repository;
 
 import java.util.UUID;
 
-public class ViewModel extends AndroidViewModel {
+public class MyEventsViewModel extends AndroidViewModel {
 
     private static final String TAG = "feature1.ViewModel";
 
     private final Feature1Repository repository;
 
-    public ViewModel(@NonNull Application application) {
+    public MyEventsViewModel(@NonNull Application application) {
         super(application);
         Log.d(TAG, "ViewModel: construct");
         repository = new Feature1Repository();

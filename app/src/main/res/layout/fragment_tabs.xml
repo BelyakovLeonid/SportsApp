@@ -19,7 +19,9 @@
         android:layout_height="@dimen/bottom_nav"
         android:layout_gravity="bottom"
         android:elevation="12dp"
-        app:labelVisibilityMode="labeled"
         app:itemRippleColor="@null"
+        app:itemTextAppearanceActive="@style/TabTextActive"
+        app:itemTextAppearanceInactive="@style/TabTextInactive"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_menu" />
 </FrameLayout>
