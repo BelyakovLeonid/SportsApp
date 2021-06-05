@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="30dp"
         android:paddingHorizontal="25dp">
 
         <TextView
@@ -18,7 +19,6 @@
             style="@style/MediumText"
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:drawablePadding="10dp"

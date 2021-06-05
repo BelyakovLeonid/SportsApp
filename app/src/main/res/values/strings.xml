@@ -52,9 +52,10 @@
     <string name="events_role_fan">ваша роль <b>болельщик</b></string>
 
     <string name="detail_chekin">Я на месте, регистрируюсь!</string>
+    <string name="detail_register">Принять участие!</string>
     <string name="detail_you_are_cancel">Отменить своё участие</string>
-    <string name="detail_you_are_sport">Вы зарегистрированны как спортсмен</string>
-    <string name="detail_you_are_fun">Вы зарегистрированны как спортсмен</string>
+    <string name="detail_you_are_sport">Вы зарегистрированны как <b>спортсмен</b></string>
+    <string name="detail_you_are_fun">Вы зарегистрированны как <b>болельщик</b></string>
 
     <string name="qr_title">Сканирование QR-кода</string>
 

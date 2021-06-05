@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter
 data class EventDto(
     val address: String,
     val description: String,
-    val date: String? = null,
+    val eventDate: String? = null,
     val id: String,
     val imageUrl: String,
     val limit: Int,
@@ -24,7 +24,7 @@ fun EventDto.toDomain(): Event {
     return Event(
         address = address,
         description = description,
-        date = date?.toLocalDateTime(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
+        date = eventDate?.toLocalDateTime(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
         id = id,
         imageUrl = imageUrl,
         name = name,

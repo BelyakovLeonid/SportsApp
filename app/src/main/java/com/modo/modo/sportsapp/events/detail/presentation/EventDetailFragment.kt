@@ -42,19 +42,24 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
 
     private fun observeData() = with(binding) {
         observeFlow(viewModel.content) { model ->
-            checkIn.isVisible = model.isOpen
+            checkIn.isVisible = model.isOpen && model.userStatus != ParticipantStatus.NONE
             name.text = model.name
             date.text = model.date
             description.text = model.description
             place.text = model.address
             regStatus.isVisible = model.userStatus != ParticipantStatus.NONE
-            val strId = if (model.userStatus == ParticipantStatus.FAN) {
-                R.string.detail_you_are_sport
-            } else {
+            val labelStrId = if (model.userStatus == ParticipantStatus.FAN) {
                 R.string.detail_you_are_fun
+            } else {
+                R.string.detail_you_are_sport
             }
-            regStatus.setText(strId)
-            buttonConnect.isVisible = model.userStatus != ParticipantStatus.NONE
+            regStatus.setText(labelStrId)
+            val buttonStrId = if (model.userStatus == ParticipantStatus.NONE) {
+                R.string.detail_register
+            } else {
+                R.string.detail_you_are_cancel
+            }
+            buttonConnect.setText(buttonStrId)
             image.load(model.imageUrl)
         }
     }

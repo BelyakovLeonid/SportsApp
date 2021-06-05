@@ -31,10 +31,10 @@ fun Event.toUi(index: Int = 0): EventItem.EventUiModel {
         name = name,
         address = address,
         imageUrl = imageUrl,
-        userStatus = ParticipantStatus.SPORTSMEN,
+        userStatus = participantStatus,
         date = date?.formatToString(),
-        isNearest = date?.isNearFromNow() ?: false,
+        isNearest = index < 2,
         description = description,
-        isOpen = index == 0
+        isOpen = date?.isNearFromNow() ?: false
     )
 }

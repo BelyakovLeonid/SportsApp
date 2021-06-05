@@ -17,5 +17,5 @@ fun LocalDateTime.formatToString(): String {
 
 fun LocalDateTime.isNearFromNow(): Boolean {
     val now = LocalDateTime.now()
-    return ChronoUnit.HOURS.between(this, now) < 2
+    return ChronoUnit.MINUTES.between(this, now) < 30
 }
