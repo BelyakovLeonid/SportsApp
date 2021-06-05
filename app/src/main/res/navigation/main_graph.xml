@@ -8,4 +8,8 @@
         android:id="@+id/tabsFragment"
         android:name="com.modo.modo.sportsapp.root.TabsFragment"
         android:label="TabsFragment" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.modo.modo.sportsapp.camera.presentation.CameraFragment"
+        android:label="CameraFragment" />
 </navigation>

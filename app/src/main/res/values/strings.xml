@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SportsApp</string>
+
+    <string name="denied_toast">Приложению необходимо данное разрешение!</string>
 </resources>
