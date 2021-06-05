@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.model.repository;
+package com.modo.modo.sportsapp.feature1.data;
 
 import android.util.Log;
 
@@ -24,14 +24,14 @@ public class Feature1Repository {
 
     private static final String TAG = "Feature1Repository";
 
-    private Gson gson = GsonSerializer.getInstance().getGson();
+    private final Gson gson = GsonSerializer.getInstance().getGson();
 
     @Getter
-    private MutableLiveData<UUID> mldNetworkError = new MutableLiveData<>();
+    private final MutableLiveData<UUID> mldNetworkError = new MutableLiveData<>();
     @Getter
-    private MutableLiveData<UUID> mldNetworkSuccess = new MutableLiveData<>();
+    private final MutableLiveData<UUID> mldNetworkSuccess = new MutableLiveData<>();
     @Getter
-    private MutableLiveData<DataWrapper<UUID>> mldPing = new MutableLiveData<>();
+    private final MutableLiveData<DataWrapper<UUID>> mldPing = new MutableLiveData<>();
 
     public void ping() {
         Log.d(TAG, "ping: ");

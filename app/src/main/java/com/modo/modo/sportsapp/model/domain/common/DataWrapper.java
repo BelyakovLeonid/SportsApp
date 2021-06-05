@@ -2,12 +2,12 @@ package com.modo.modo.sportsapp.model.domain.common;
 
 @SuppressWarnings("unused")
 public class DataWrapper<T> {
-    private T object;
+    private T dataObject;
     private boolean error;
     private int code;
 
-    public DataWrapper(T object) {
-        this.object = object;
+    public DataWrapper(T dataObject) {
+        this.dataObject = dataObject;
         this.error = false;
     }
 
@@ -16,12 +16,12 @@ public class DataWrapper<T> {
         this.error = true;
     }
 
-    public T getObject() {
-        return object;
+    public T getDataObject() {
+        return dataObject;
     }
 
-    public void setObject(T object) {
-        this.object = object;
+    public void setDataObject(T dataObject) {
+        this.dataObject = dataObject;
     }
 
     public boolean isError() {

@@ -32,7 +32,6 @@ class Tab1Fragment : Fragment(R.layout.fragment_tab1) {
     private fun bindView() {
         viewModel.bindPing().observe(viewLifecycleOwner) { userDataWrapper ->
 
-            // todo do something if success or not
         }
     }
 
