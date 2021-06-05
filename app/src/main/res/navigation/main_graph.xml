@@ -2,14 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph.xml"
-    app:startDestination="@id/tabsFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/tabsFragment"
-        android:name="com.modo.modo.sportsapp.root.TabsFragment"
+        android:name="com.modo.modo.sportsapp.tabs.presentation.TabsFragment"
         android:label="TabsFragment" />
     <fragment
         android:id="@+id/cameraFragment"
         android:name="com.modo.modo.sportsapp.camera.presentation.CameraFragment"
         android:label="CameraFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.modo.modo.sportsapp.login.presentation.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>

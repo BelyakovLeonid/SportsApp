@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.root.feature4.presentation
+package com.modo.modo.sportsapp.feature4.presentation
 
 import androidx.fragment.app.Fragment
 import com.modo.modo.sportsapp.R

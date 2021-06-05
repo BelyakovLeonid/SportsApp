@@ -67,6 +67,9 @@ dependencies {
     // Barcode
     implementation 'com.google.mlkit:barcode-scanning:16.1.2'
 
+    // Coil
+    implementation "io.coil-kt:coil:1.1.1"
+
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
