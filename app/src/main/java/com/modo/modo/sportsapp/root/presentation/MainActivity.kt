@@ -1,7 +1,7 @@
-package com.modo.modo.sportsapp
+package com.modo.modo.sportsapp.root.presentation
 
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.modo.modo.sportsapp.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 

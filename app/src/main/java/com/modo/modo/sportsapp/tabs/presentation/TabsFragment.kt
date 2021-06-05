@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.root
+package com.modo.modo.sportsapp.tabs.presentation
 
 import android.os.Bundle
 import android.view.View

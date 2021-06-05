@@ -2,4 +2,9 @@
     <string name="app_name">SportsApp</string>
 
     <string name="denied_toast">Приложению необходимо данное разрешение!</string>
+    <string name="text_link">НАЖИМАЯ ДАЛЕЕ, ВЫ СОГЛАШАЕТЕСЬ С\n<a href="https://www.psbank.ru">ПОЛИТИКОЙ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a></string>
+    <string name="text_error">Проверьте правильность данных!</string>
+    <string name="hint_id">Ваш ID</string>
+    <string name="hint_password">Пароль</string>
+    <string name="button_next">Далее</string>
 </resources>
