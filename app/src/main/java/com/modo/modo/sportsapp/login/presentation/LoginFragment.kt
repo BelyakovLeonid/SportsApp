@@ -5,12 +5,10 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.base.utils.LocalStorage
-import com.modo.modo.sportsapp.base.utils.observeFlow
 import com.modo.modo.sportsapp.databinding.FragmentLoginBinding
 import com.modo.modo.sportsapp.login.constants.LoginFragmentConstants.AUTH_DATA
 import com.modo.modo.sportsapp.login.domain.AuthResponse
