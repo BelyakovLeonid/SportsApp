@@ -5,7 +5,7 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.base.utils.observeFlow
@@ -35,16 +35,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun observeData() {
         observeFlow(viewModel.loginState) { loginSuccess ->
-            if (loginSuccess) {
-                openTabScreen()
-            } else {
-                showError()
-            }
+            if (!loginSuccess) showError()
         }
-    }
+        observeFlow(viewModel.navigationCommands) { destinationId ->
+            val navController = Navigation.findNavController(requireActivity(), R.id.activityContent)
+            val mainGraph = navController.navInflater.inflate(R.navigation.main_graph)
 
-    private fun openTabScreen() {
-        findNavController().navigate(R.id.tabsFragment)
+            // Way to change first screen at runtime.
+            mainGraph.startDestination = destinationId
+            navController.graph = mainGraph
+        }
     }
 
     private fun showError() = with(binding) {
