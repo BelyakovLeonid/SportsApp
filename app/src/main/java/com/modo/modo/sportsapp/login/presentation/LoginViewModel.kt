@@ -1,35 +1,45 @@
 package com.modo.modo.sportsapp.login.presentation
 
-import android.app.Application
 import android.util.Log
-import androidx.annotation.NonNull
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.login.data.LoginRepository
-import com.modo.modo.sportsapp.login.domain.AuthResponse
-import com.modo.modo.sportsapp.model.domain.common.DataWrapper
+import com.modo.modo.sportsapp.login.data.local.TokenRepository
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
-class LoginViewModel constructor(@NonNull application: Application): AndroidViewModel(application) {
+class LoginViewModel(
+    private val loginRepository: LoginRepository,
+    private val tokenRepository: TokenRepository
+) : ViewModel() {
 
-    private var repository = LoginRepository()
-
-    private val _navigationCommands = MutableSharedFlow<Int?>(replay = 0)
+    private val _navigationCommands = MutableStateFlow<Int?>(null)
     val navigationCommands: Flow<Int> = _navigationCommands.filterNotNull()
 
-    fun bindAuth(): LiveData<DataWrapper<AuthResponse?>?>? {
-        Log.d(TAG, "bindAuth: ")
-        return repository.mldAuthData
+    private val _loginSuccess = MutableStateFlow<Boolean?>(null)
+    val loginSuccess: Flow<Boolean> = _loginSuccess.filterNotNull()
+
+    fun checkLoggedInState() {
+        if (tokenRepository.getToken() != null) {
+            _navigationCommands.tryEmit(R.id.tabsFragment)
+        }
     }
 
-    fun doLogin(login: String?, pass: String?) {
-        Log.d(TAG, String.format("doLogin: login = %s, pass = %s", login, pass))
-        repository.auth(login, pass)
+    fun onLoginClick(login: String, pass: String) {
+        viewModelScope.launch(CoroutineExceptionHandler(::onError)) {
+            val isSuccess = loginRepository.doLogin(login, pass)
+            _loginSuccess.value = isSuccess
+            if (isSuccess) _navigationCommands.emit(R.id.interestsFragment)
+        }
     }
 
-    companion object {
-        const val TAG = "LoginViewModel"
+    private fun onError(context: CoroutineContext, t: Throwable) {
+        _loginSuccess.value = false
     }
 }

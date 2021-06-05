@@ -20,8 +20,5 @@ class MyEventsFragment : Fragment(R.layout.fragment_my_events) {
     }
 
     private fun bindView() {
-        viewModel.bindPing().observe(viewLifecycleOwner) { userDataWrapper ->
-
-        }
     }
 }
