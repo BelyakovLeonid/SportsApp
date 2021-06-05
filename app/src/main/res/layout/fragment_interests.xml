@@ -194,9 +194,7 @@
             android:layout_marginTop="40dp"
             android:text="@string/interests_desc"
             app:layout_constraintTop_toBottomOf="@id/fanChips"
-            app:layout_constraintVertical_bias="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/buttonNext"
@@ -206,9 +204,10 @@
             android:text="@string/interests_next"
             android:padding="5dp"
             android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintVertical_bias="1"
             android:background="?attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@id/description"
-            app:layout_constraintTop_toTopOf="@id/description"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

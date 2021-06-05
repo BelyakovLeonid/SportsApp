@@ -24,7 +24,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     }
 
     private fun handleView() = with(binding) {
-        linkText.movementMethod = LinkMovementMethod.getInstance()
         nextButton.setOnClickListener {
             viewModel.onLoginClick(
                 login = idInputText.text.toString(),

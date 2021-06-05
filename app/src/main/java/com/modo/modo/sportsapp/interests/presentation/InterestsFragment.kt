@@ -29,7 +29,7 @@ class InterestsFragment : Fragment(R.layout.fragment_interests) {
                 sportsmanChips.getSelectedChipsStrings(),
                 fanChips.getSelectedChipsStrings()
             )
-            findNavController().navigate(R.id.tabsFragment)
+            findNavController().navigate(R.id.gadgetsFragment)
         }
     }
 

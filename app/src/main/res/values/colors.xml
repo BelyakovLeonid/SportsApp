@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="primary">@color/colorPsbAccentVariant3</color>
+<resources>
+    <color name="primary">@color/colorPsbAccent</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="red">#A00000</color>
-    <color name="gray">#DFDFDF</color>
+    <color name="gray">#878585</color>
+    <color name="grayLight">#E5E5E5</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="barcode_reticle_background">#99000000</color>
@@ -21,7 +22,6 @@
 
     <color name="colorPsbDark">#2e2e40</color>
     <color name="colorPsbUltraDark">#21233a</color>
-    <color name="colorPsbAccentVariant1">#f26121</color>
-    <color name="colorPsbAccentVariant2">#e25111</color>
-    <color name="colorPsbAccentVariant3">#ff7131</color>
+    <color name="colorPsbAccent">#8280BD</color>
+    <color name="colorPsbAccent1">#FCE584</color>
 </resources>
