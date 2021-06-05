@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.model.repository;
+package com.modo.modo.sportsapp.feature1.data;
 
 import android.util.Log;
 

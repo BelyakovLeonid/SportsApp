@@ -8,7 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.modo.modo.sportsapp.model.domain.common.DataWrapper;
-import com.modo.modo.sportsapp.model.repository.Feature1Repository;
+import com.modo.modo.sportsapp.feature1.data.Feature1Repository;
 
 import java.util.UUID;
 
