@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.model.repository;
+package com.modo.modo.sportsapp.feature2.data;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -9,9 +9,9 @@ import java.util.UUID;
 
 import lombok.Getter;
 
-public class Feature5Repository {
+public class Feature2Repository {
 
-    private static final String TAG = "Feature5Repository";
+    private static final String TAG = "Feature2Repository";
 
     private Gson gson = GsonSerializer.getInstance().getGson();
 
@@ -19,4 +19,5 @@ public class Feature5Repository {
     private MutableLiveData<UUID> mldNetworkError = new MutableLiveData<>();
     @Getter
     private MutableLiveData<UUID> mldNetworkSuccess = new MutableLiveData<>();
+
 }

@@ -16,7 +16,7 @@ public class ViewModel extends AndroidViewModel {
 
     private static final String TAG = "feature1.ViewModel";
 
-    private Feature1Repository repository;
+    private final Feature1Repository repository;
 
     public ViewModel(@NonNull Application application) {
         super(application);

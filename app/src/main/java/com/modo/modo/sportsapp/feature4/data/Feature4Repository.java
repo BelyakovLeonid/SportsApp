@@ -1,4 +1,4 @@
-package com.modo.modo.sportsapp.model.repository;
+package com.modo.modo.sportsapp.feature4.data;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -9,9 +9,9 @@ import java.util.UUID;
 
 import lombok.Getter;
 
-public class Feature3Repository {
+public class Feature4Repository {
 
-    private static final String TAG = "Feature3Repository";
+    private static final String TAG = "Feature4Repository";
 
     private Gson gson = GsonSerializer.getInstance().getGson();
 
