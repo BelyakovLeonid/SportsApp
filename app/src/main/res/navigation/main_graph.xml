@@ -17,23 +17,14 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.modo.modo.sportsapp.login.presentation.LoginFragment"
-        android:label="LoginFragment">
-        <action
-            android:id="@+id/action_loginFragment_to_tabsFragment"
-            app:destination="@id/tabsFragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/main_graph"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_loginFragment_to_interestsFragment"
-            app:destination="@id/interestsFragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
+        android:label="LoginFragment" />
 
     <fragment
         android:id="@+id/interestsFragment"
         android:name="com.modo.modo.sportsapp.interests.presentation.InterestsFragment"
         android:label="InterestsFragment" />
+    <fragment
+        android:id="@+id/gadgetsFragment"
+        android:name="com.modo.modo.sportsapp.gadgets.presentation.GadgetsFragment"
+        android:label="GadgetsFragment" />
 </navigation>
