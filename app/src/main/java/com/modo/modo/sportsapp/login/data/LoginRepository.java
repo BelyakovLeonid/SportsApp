@@ -25,9 +25,9 @@ public class LoginRepository {
     private static final String TAG = "LoginRepository";
 
     @Getter
-    private final MutableLiveData<UUID> mldNetworkError = new MutableLiveData<>();
+    public final MutableLiveData<UUID> mldNetworkError = new MutableLiveData<>();
     @Getter
-    private final MutableLiveData<DataWrapper<AuthResponse>> mldAuthData = new MutableLiveData<>();
+    public final MutableLiveData<DataWrapper<AuthResponse>> mldAuthData = new MutableLiveData<>();
 
     public void auth(String login, String pass) {
         Log.d(TAG, "auth: ");
