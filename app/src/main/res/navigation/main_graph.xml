@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_graph.xml"
+    android:id="@+id/main_graph"
     app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/tabsFragment"
         android:name="com.modo.modo.sportsapp.tabs.presentation.TabsFragment"
         android:label="TabsFragment" />
+
     <fragment
         android:id="@+id/cameraFragment"
         android:name="com.modo.modo.sportsapp.camera.presentation.CameraFragment"
         android:label="CameraFragment" />
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.modo.modo.sportsapp.login.presentation.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_tabsFragment"
+            app:destination="@id/tabsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_interestsFragment"
+            app:destination="@id/interestsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.modo.modo.sportsapp.interests.presentation.InterestsFragment"
+        android:label="InterestsFragment" />
 </navigation>
