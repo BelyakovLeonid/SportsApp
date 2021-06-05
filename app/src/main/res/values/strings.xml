@@ -53,5 +53,7 @@
     <string name="detail_chekin">Я на месте, регистрируюсь!</string>
     <string name="detail_you_are_cancel">Отменить своё участие</string>
     <string name="detail_you_are_sport">Вы зарегистрированны как спортсмен</string>
-    <string name="detail_you_are_fan">Вы зарегистрированны как болельщик</string>
+    <string name="detail_you_are_fun">Вы зарегистрированны как спортсмен</string>
+
+    <string name="qr_title">Сканирование QR-кода</string>
 </resources>

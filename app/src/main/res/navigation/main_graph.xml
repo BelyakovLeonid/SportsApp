@@ -31,4 +31,8 @@
         android:id="@+id/eventDetailFragment"
         android:name="com.modo.modo.sportsapp.events.presentation.EventDetailFragment"
         android:label="EventDetailFragment" />
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="com.modo.modo.sportsapp.qr.presentation.QrFragment"
+        android:label="QrFragment" />
 </navigation>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import com.modo.modo.sportsapp.R
@@ -23,7 +24,15 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupView()
         observeData()
+    }
+
+    private fun setupView() = with(binding) {
+        checkIn.setOnClickListener {
+            Navigation.findNavController(requireActivity(), R.id.activityContent)
+                .navigate(R.id.qrFragment)
+        }
     }
 
     private fun observeData() = with(binding) {
@@ -35,9 +44,9 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
             place.text = model.address
             regStatus.isVisible = model.userStatus != ParticipantStatus.NONE
             val strId = if (model.userStatus == ParticipantStatus.FAN) {
-                R.string.detail_you_are_fan
+                R.string.detail_you_are_sport
             } else {
-                R.string.detail_you_are_fan
+                R.string.detail_you_are_fun
             }
             regStatus.setText(strId)
             buttonConnect.isVisible = model.userStatus != ParticipantStatus.NONE

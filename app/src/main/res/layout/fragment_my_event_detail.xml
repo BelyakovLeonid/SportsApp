@@ -13,6 +13,7 @@
         android:paddingHorizontal="25dp">
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/checkIn"
             style="@style/MediumText"
             android:layout_width="0px"
@@ -21,7 +22,6 @@
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:drawablePadding="10dp"
-            android:paddingHorizontal="2dp"
             android:paddingVertical="10dp"
             android:text="@string/detail_chekin"
             app:drawableStartCompat="@drawable/ic_qr"
@@ -31,6 +31,7 @@
 
         <TextView
             android:id="@+id/name"
+            android:maxLines="1"
             style="@style/XXLargeText"
             android:layout_width="0px"
             android:layout_height="wrap_content"

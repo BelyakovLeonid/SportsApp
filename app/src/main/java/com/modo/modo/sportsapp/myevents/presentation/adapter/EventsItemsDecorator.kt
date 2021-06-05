@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
-import android.util.Log
 import android.view.View
 import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
@@ -25,13 +24,13 @@ class EventsItemsDecorator(
         val position = parent.getChildAdapterPosition(view)
 
         if (position == 0) {
-            outRect.top = offsetStandard + titleSize + offsetStandard
+            outRect.top = offsetStandard * 3 + titleSize
         } else {
             val prev = adapter.currentList.getOrNull(position - 1)
             val current = adapter.currentList.getOrNull(position)
 
             if (prev != null && current != null && prev.isNearest && !current.isNearest) {
-                outRect.top = offsetStandard + titleSize + offsetStandard
+                outRect.top = offsetStandard * 3 + titleSize
             } else {
                 outRect.top = offsetStandard
             }
@@ -59,7 +58,7 @@ class EventsItemsDecorator(
                     0,
                     firstText.length,
                     0F,
-                    viewBounds.top + offsetStandard + titleSize.toFloat(),
+                    viewBounds.top + offsetStandard * 2 + titleSize.toFloat(),
                     paint
                 )
             } else {
@@ -73,7 +72,7 @@ class EventsItemsDecorator(
                         0,
                         secondText.length,
                         0F,
-                        viewBounds.top + offsetStandard + titleSize.toFloat(),
+                        viewBounds.top + offsetStandard * 2 + titleSize.toFloat(),
                         paint
                     )
                 }
