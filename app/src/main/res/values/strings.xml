@@ -2,9 +2,34 @@
     <string name="app_name">SportsApp</string>
 
     <string name="denied_toast">Приложению необходимо данное разрешение!</string>
-    <string name="text_link">НАЖИМАЯ ДАЛЕЕ, ВЫ СОГЛАШАЕТЕСЬ С\n<a href="https://www.psbank.ru">ПОЛИТИКОЙ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a></string>
+    <string name="interests_fan">Как болельщик</string>
+    <string name="interests_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
+    <string name="interests_next">Далее ¬</string>
+    <string name="interests_tennis">Теннис</string>
+    <string name="interests_soccer">Футбол</string>
+    <string name="interests_hokey">Хоккей</string>
+    <string name="interests_basketball">Баскетбол</string>
+    <string name="interests_volleyball">Волейбол</string>
+    <string name="interests_running">Бег</string>
+    <string name="interests_bicycle">Велоспорт</string>
+    <string name="interests_strong">Силовой спорт</string>
+    <string name="interests_stretching">Стретчинг</string>
+    <string name="interests_sportsmen">Как спортсмен</string>
+    <string name="interests_title">Мои интересы</string>
+
+    <string name="text_forgot">Забыли пароль?</string>
     <string name="text_error">Проверьте правильность данных!</string>
-    <string name="hint_id">Ваш ID</string>
+    <string name="hint_id">Ваш табельный номер</string>
     <string name="hint_password">Пароль</string>
-    <string name="button_next">Далее</string>
+    <string name="button_next">Далее ¬</string>
+
+    <string name="login_label">CПОРТ</string>
+    <string name="login_title">Добро пожаловать\nв ПСБ Спорт!</string>
+    <string name="login_next">Войти ¬</string>
+
+    <string name="gadgets_title">Подключите ваше умное устройство к приложению</string>
+    <string name="gadgets_subtitle">Подключение умного устройства позволит начислять награждения за вашу физическую активность</string>
+    <string name="gadgets_button">Подключить!</string>
+    <string name="gadgets_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
+    <string name="gadgets_next">Далее ¬</string>
 </resources>

@@ -2,6 +2,8 @@
 <resources>
     <dimen name="bottom_nav">70dp</dimen>
 
+    <dimen name="chip_height">50dp</dimen>
+
     <dimen name="barcode_box_stroke_width">4dp</dimen>
     <dimen name="barcode_box_corner_radius">8dp</dimen>
 </resources>

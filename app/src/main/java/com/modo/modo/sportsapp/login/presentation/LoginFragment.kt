@@ -6,6 +6,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.base.utils.LocalStorage
@@ -61,6 +63,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun openTabScreen() {
         findNavController().navigate(R.id.tabsFragment)
+        observeFlow(viewModel.navigationCommands) { destinationId ->
+            val navController = Navigation.findNavController(requireActivity(), R.id.activityContent)
+            val mainGraph = navController.navInflater.inflate(R.navigation.main_graph)
+
+            // Way to change first screen at runtime.
+            mainGraph.startDestination = destinationId
+            navController.graph = mainGraph
+        }
     }
 
     private fun showError() = with(binding) {
