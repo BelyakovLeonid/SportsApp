@@ -14,7 +14,16 @@ class TokenRepository(
         localStorage.edit().putString(TOKEN_KEY, token).apply()
     }
 
+    fun getUserId(): String? {
+        return localStorage.getString(USER_KEY, null)
+    }
+
+    fun saveUserId(user: String) {
+        localStorage.edit().putString(USER_KEY, user).apply()
+    }
+
     companion object {
         private const val TOKEN_KEY = "token"
+        private const val USER_KEY = "user"
     }
 }

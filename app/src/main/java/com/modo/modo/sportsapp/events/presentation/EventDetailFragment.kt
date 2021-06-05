@@ -2,6 +2,7 @@ package com.modo.modo.sportsapp.events.presentation
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -11,6 +12,7 @@ import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.base.utils.observeFlow
 import com.modo.modo.sportsapp.databinding.FragmentMyEventDetailBinding
 import com.modo.modo.sportsapp.myevents.presentation.model.ParticipantStatus
+import com.modo.modo.sportsapp.qr.presentation.QrFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -31,7 +33,10 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
     private fun setupView() = with(binding) {
         checkIn.setOnClickListener {
             Navigation.findNavController(requireActivity(), R.id.activityContent)
-                .navigate(R.id.qrFragment)
+                .navigate(
+                    R.id.qrFragment,
+                    bundleOf(QrFragment.EVENT_ID_EXTRA to arguments?.getString(EVENT_ID_EXTRA))
+                )
         }
     }
 

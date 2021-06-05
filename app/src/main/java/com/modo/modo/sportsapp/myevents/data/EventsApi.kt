@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface EventsApi {
 
-    @GET("event")
+    @GET("event/withuser")
     suspend fun getEvents(): List<EventDto>
 }

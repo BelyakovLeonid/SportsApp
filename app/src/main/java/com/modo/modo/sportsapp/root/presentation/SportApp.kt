@@ -5,6 +5,7 @@ import com.modo.modo.sportsapp.base.di.baseModule
 import com.modo.modo.sportsapp.events.di.eventsModule
 import com.modo.modo.sportsapp.login.di.loginModule
 import com.modo.modo.sportsapp.myevents.di.myEventsModule
+import com.modo.modo.sportsapp.qr.di.qrModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -18,7 +19,8 @@ class SportApp : Application() {
                 baseModule(),
                 loginModule(),
                 myEventsModule(),
-                eventsModule()
+                eventsModule(),
+                qrModule()
             )
         }
     }
