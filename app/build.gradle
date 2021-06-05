@@ -3,6 +3,10 @@ plugins {
     id 'kotlin-android'
 }
 
+def appPropertiesFile = rootProject.file("app/app.properties")
+def appProperties = new Properties()
+appProperties.load(new FileInputStream(appPropertiesFile))
+
 android {
     compileSdkVersion 30
 
@@ -12,6 +16,10 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+
+        buildConfigField("String", "AES_KEY", appProperties['AES_KEY'])
+        buildConfigField("String", "SERVER_BASE_URL", appProperties['SERVER_BASE_URL'])
+        buildConfigField("boolean", "ENCRYPTION_ENABLED", appProperties['ENCRYPTION_ENABLED'])
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,17 +56,38 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
-    //ViewBindingDelegate
+    // ViewBindingDelegate
     implementation 'com.kirich1409.viewbindingpropertydelegate:vbpd-noreflection:1.4.1'
 
-    //Camera
+    // Camera
     implementation "androidx.camera:camera-camera2:1.1.0-alpha04"
     implementation "androidx.camera:camera-lifecycle:1.1.0-alpha04"
     implementation "androidx.camera:camera-view:1.0.0-alpha24"
 
-    //Barcode
+    // Barcode
     implementation 'com.google.mlkit:barcode-scanning:16.1.2'
 
     // Coil
     implementation "io.coil-kt:coil:1.1.1"
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.1'
+
+    // LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:common-java8:1.1.1"
+
+    // RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.2.17"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    // Lombok
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    implementation 'org.projectlombok:lombok:1.18.12'
 }
