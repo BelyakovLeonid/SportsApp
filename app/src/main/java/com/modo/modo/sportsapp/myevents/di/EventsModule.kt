@@ -8,7 +8,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.create
 
-fun eventsModule() = module {
+fun myEventsModule() = module {
     factory<EventsApi> { get<Retrofit>().create() }
     single { EventsRepository(get()) }
 

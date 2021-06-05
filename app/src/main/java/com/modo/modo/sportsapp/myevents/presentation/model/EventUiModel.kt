@@ -9,6 +9,7 @@ data class EventUiModel(
     val address: String,
     val userStatus: ParticipantStatus,
     val date: String?,
+    val imageUrl: String,
     val isNearest: Boolean,
     val description: String,
     val isOpen: Boolean
@@ -19,6 +20,7 @@ fun Event.toUi(index: Int = 0): EventUiModel {
         id = id,
         name = name,
         address = address,
+        imageUrl = imageUrl,
         userStatus = ParticipantStatus.SPORTSMEN,
         date = date?.formatToString(),
         isNearest = index < 2,

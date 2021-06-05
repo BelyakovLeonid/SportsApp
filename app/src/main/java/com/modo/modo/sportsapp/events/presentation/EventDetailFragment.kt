@@ -5,9 +5,11 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
+import coil.load
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.base.utils.observeFlow
 import com.modo.modo.sportsapp.databinding.FragmentMyEventDetailBinding
+import com.modo.modo.sportsapp.myevents.presentation.model.ParticipantStatus
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -16,7 +18,7 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
     private val binding by viewBinding(FragmentMyEventDetailBinding::bind)
 
     private val viewModel by viewModel<EventDetailViewModel> {
-        parametersOf(arguments?.getParcelable(EVENT_ID_EXTRA))
+        parametersOf(arguments?.getString(EVENT_ID_EXTRA))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,11 +31,21 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
             checkIn.isVisible = model.isOpen
             name.text = model.name
             date.text = model.date
-            description.text = model.name // todo need description
+            description.text = model.description
+            place.text = model.address
+            regStatus.isVisible = model.userStatus != ParticipantStatus.NONE
+            val strId = if (model.userStatus == ParticipantStatus.FAN) {
+                R.string.detail_you_are_fan
+            } else {
+                R.string.detail_you_are_fan
+            }
+            regStatus.setText(strId)
+            buttonConnect.isVisible = model.userStatus != ParticipantStatus.NONE
+            image.load(model.imageUrl)
         }
     }
 
     companion object {
-        private const val EVENT_ID_EXTRA = "event_id_exrtra"
+        const val EVENT_ID_EXTRA = "event_id_exrtra"
     }
 }

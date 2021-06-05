@@ -9,8 +9,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 
 class EventDetailViewModel(
-    private val repository: EventsRepository,
-    private val eventId: String
+    repository: EventsRepository,
+    eventId: String
 ) : ViewModel() {
 
     private val _content = MutableStateFlow<EventUiModel?>(null)
