@@ -3,7 +3,7 @@ package com.modo.modo.sportsapp.myevents.presentation
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.modo.modo.sportsapp.myevents.data.EventsRepository
+import com.modo.modo.sportsapp.myevents.data.MyEventsRepository
 import com.modo.modo.sportsapp.myevents.presentation.model.EventUiModel
 import com.modo.modo.sportsapp.myevents.presentation.model.toUi
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 class MyEventsViewModel(
-    private val repository: EventsRepository
+    private val repository: MyEventsRepository
 ) : ViewModel() {
 
     private val _content = MutableStateFlow<List<EventUiModel>?>(null)

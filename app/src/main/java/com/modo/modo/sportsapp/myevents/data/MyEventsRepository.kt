@@ -3,8 +3,8 @@ package com.modo.modo.sportsapp.myevents.data
 import com.modo.modo.sportsapp.myevents.data.model.Event
 import com.modo.modo.sportsapp.myevents.data.remote.model.toDomain
 
-class EventsRepository(
-    private val api: EventsApi
+class MyEventsRepository(
+    private val api: MyEventsApi
 ) {
 
     private var cachedEvents = emptyList<Event>()
