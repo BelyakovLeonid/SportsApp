@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.modo.modo.sportsapp.camera.presentation.view.ScannerOverlayView
+    <com.modo.modo.sportsapp.admin.camera.presentation.view.ScannerOverlayView
         android:id="@+id/overlay"
         android:layout_width="0px"
         android:layout_height="0px"

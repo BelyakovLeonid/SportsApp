@@ -83,4 +83,9 @@ dependencies {
 
     // Serialization
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1'
+
+    //QR-gen
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0'
+
 }

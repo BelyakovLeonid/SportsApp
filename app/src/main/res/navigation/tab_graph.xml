@@ -6,22 +6,22 @@
 
     <fragment
         android:id="@+id/tab1Fragment"
-        android:name="com.modo.modo.sportsapp.myevents.presentation.MyEventsFragment"
+        android:name="com.modo.modo.sportsapp.base.events.myevents.presentation.MyEventsFragment"
         android:label="Tab1Fragment" />
     <fragment
         android:id="@+id/tab2Fragment"
-        android:name="com.modo.modo.sportsapp.feature2.presentation.Tab2Fragment"
+        android:name="com.modo.modo.sportsapp.base.events.allevents.presentation.EventsAndActivitiesFragment"
         android:label="Tab2Fragment" />
     <fragment
         android:id="@+id/tab3Fragment"
-        android:name="com.modo.modo.sportsapp.feature3.presentation.Tab3Fragment"
+        android:name="com.modo.modo.sportsapp.user.feature3.presentation.Tab3Fragment"
         android:label="Tab3Fragment" />
     <fragment
         android:id="@+id/tab4Fragment"
-        android:name="com.modo.modo.sportsapp.feature4.presentation.Tab4Fragment"
+        android:name="com.modo.modo.sportsapp.user.feature4.presentation.Tab4Fragment"
         android:label="Tab4Fragment" />
     <fragment
         android:id="@+id/tab5Fragment"
-        android:name="com.modo.modo.sportsapp.feature5.presentation.Tab5Fragment"
+        android:name="com.modo.modo.sportsapp.user.feature5.presentation.Tab5Fragment"
         android:label="Tab5Fragment" />
 </navigation>

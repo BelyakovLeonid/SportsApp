@@ -47,11 +47,31 @@
 
     <string name="events_open">Регистрация открыта!</string>
     <string name="events_more"><u>Подробнее</u></string>
+    <string name="events_empty">Тут пока пусто, добавляй события на вкладке <b>События</b></string>
     <string name="events_role_sport">ваша роль <b>спортсмен</b></string>
     <string name="events_role_fan">ваша роль <b>болельщик</b></string>
 
     <string name="detail_chekin">Я на месте, регистрируюсь!</string>
+    <string name="detail_register">Принять участие!</string>
+    <string name="detail_register_until">регистрация начнётся за 1 час</string>
     <string name="detail_you_are_cancel">Отменить своё участие</string>
-    <string name="detail_you_are_sport">Вы зарегистрированны как спортсмен</string>
-    <string name="detail_you_are_fan">Вы зарегистрированны как болельщик</string>
+    <string name="detail_you_are_sport">Вы зарегистрированны как <b>спортсмен</b></string>
+    <string name="detail_you_are_fun">Вы зарегистрированны как <b>болельщик</b></string>
+    <string name="detail_plan">Запаланировать участие как</string>
+    <string name="detail_sport">Спортсмен</string>
+    <string name="detail_fun">Болельщик</string>
+    <string name="detail_sport_points">100 пульса</string>
+    <string name="detail_fun_points">50 пульса</string>
+
+    <string name="qr_title">Сканирование QR-кода</string>
+
+    <string name="events_title">Мероприятия</string>
+    <string name="events_show_all"><u>Показать все</u></string>
+    <string name="events_activities">Активности</string>
+    <string name="events_are_you_running">Вы сейчас занимаетесь бегом?</string>
+    <string name="events_yes">Всё верно!</string>
+    <string name="events_no">Нет, не угадали, выберу другую активность</string>
+    <string name="activity_run">Бег</string>
+    <string name="activity_bicycle">Езда на\nвелосипеде</string>
+    <string name="activity_strong">Силовые упражнения</string>
 </resources>
