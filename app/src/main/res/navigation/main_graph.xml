@@ -6,33 +6,33 @@
 
     <fragment
         android:id="@+id/tabsFragment"
-        android:name="com.modo.modo.sportsapp.tabs.presentation.TabsFragment"
+        android:name="com.modo.modo.sportsapp.user.tabs.presentation.TabsFragment"
         android:label="TabsFragment" />
 
     <fragment
         android:id="@+id/cameraFragment"
-        android:name="com.modo.modo.sportsapp.camera.presentation.CameraFragment"
+        android:name="com.modo.modo.sportsapp.admin.camera.presentation.CameraFragment"
         android:label="CameraFragment" />
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.modo.modo.sportsapp.login.presentation.LoginFragment"
+        android:name="com.modo.modo.sportsapp.base.login.presentation.LoginFragment"
         android:label="LoginFragment" />
 
     <fragment
         android:id="@+id/interestsFragment"
-        android:name="com.modo.modo.sportsapp.interests.presentation.InterestsFragment"
+        android:name="com.modo.modo.sportsapp.user.interests.presentation.InterestsFragment"
         android:label="InterestsFragment" />
     <fragment
         android:id="@+id/gadgetsFragment"
-        android:name="com.modo.modo.sportsapp.gadgets.presentation.GadgetsFragment"
+        android:name="com.modo.modo.sportsapp.user.gadgets.presentation.GadgetsFragment"
         android:label="GadgetsFragment" />
     <fragment
         android:id="@+id/eventDetailFragment"
-        android:name="com.modo.modo.sportsapp.events.detail.presentation.EventDetailFragment"
+        android:name="com.modo.modo.sportsapp.base.events.detail.presentation.EventDetailFragment"
         android:label="EventDetailFragment" />
     <fragment
         android:id="@+id/qrFragment"
-        android:name="com.modo.modo.sportsapp.qr.presentation.QrFragment"
+        android:name="com.modo.modo.sportsapp.user.qr.presentation.QrFragment"
         android:label="QrFragment" />
 </navigation>
