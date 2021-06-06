@@ -72,6 +72,6 @@
     <string name="events_yes">Всё верно!</string>
     <string name="events_no">Нет, не угадали, выберу другую активность</string>
     <string name="activity_run">Бег</string>
-    <string name="activity_bicycle">Езда на велосипеде</string>
+    <string name="activity_bicycle">Езда на\nвелосипеде</string>
     <string name="activity_strong">Силовые упражнения</string>
 </resources>

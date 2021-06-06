@@ -11,12 +11,13 @@ import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.databinding.FragmentInterestsBinding
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class InterestsFragment : Fragment(R.layout.fragment_interests) {
 
     private val binding by viewBinding(FragmentInterestsBinding::bind)
 
-    private val viewModel by viewModels<InterestsViewModel>()
+    private val viewModel by viewModel<InterestsViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

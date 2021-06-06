@@ -3,6 +3,7 @@ package com.modo.modo.sportsapp.login.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.modo.modo.sportsapp.R
+import com.modo.modo.sportsapp.login.data.LoginFlowRepository
 import com.modo.modo.sportsapp.login.data.LoginRepository
 import com.modo.modo.sportsapp.login.data.local.TokenRepository
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -14,7 +15,8 @@ import kotlin.coroutines.CoroutineContext
 
 class LoginViewModel(
     private val loginRepository: LoginRepository,
-    private val tokenRepository: TokenRepository
+    private val tokenRepository: TokenRepository,
+    private val flowRepository: LoginFlowRepository
 ) : ViewModel() {
 
     private val _navigationCommands = MutableStateFlow<Int?>(null)
@@ -25,7 +27,12 @@ class LoginViewModel(
 
     fun checkLoggedInState() {
         if (tokenRepository.getToken() != null) {
-            _navigationCommands.tryEmit(R.id.tabsFragment)
+            val destId = if (flowRepository.hasInterestsShown()) {
+                R.id.tabsFragment
+            } else {
+                R.id.interestsFragment
+            }
+            _navigationCommands.tryEmit(destId)
         }
     }
 
@@ -33,7 +40,14 @@ class LoginViewModel(
         viewModelScope.launch(CoroutineExceptionHandler(::onError)) {
             val isSuccess = loginRepository.doLogin(login, pass)
             _loginSuccess.value = isSuccess
-            if (isSuccess) _navigationCommands.emit(R.id.interestsFragment)
+            if (isSuccess) {
+                val destId = if (flowRepository.hasInterestsShown()) {
+                    R.id.tabsFragment
+                } else {
+                    R.id.interestsFragment
+                }
+                _navigationCommands.emit(destId)
+            }
         }
     }
 
