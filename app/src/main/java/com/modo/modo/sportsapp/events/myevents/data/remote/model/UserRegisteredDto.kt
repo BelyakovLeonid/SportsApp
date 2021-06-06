@@ -5,5 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class UserRegisteredDto(
     val approved: Boolean,
+    val eventId: String,
+    val userId: String,
     val participationType: String
 )

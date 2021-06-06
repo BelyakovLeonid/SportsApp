@@ -10,7 +10,7 @@ import retrofit2.create
 
 fun myEventsModule() = module {
     factory<EventsApi> { get<Retrofit>().create() }
-    single { EventsRepository(get()) }
+    single { EventsRepository(get(), get()) }
 
     viewModel {
         MyEventsViewModel(get())

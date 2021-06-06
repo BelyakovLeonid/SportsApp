@@ -10,9 +10,10 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
-import kotlin.math.log
 
 class MyEventsViewModel(
     private val repository: EventsRepository
@@ -22,17 +23,28 @@ class MyEventsViewModel(
     val content: Flow<List<EventItem>> = _content.filterNotNull()
 
     init {
-        viewModelScope.launch(CoroutineExceptionHandler(::onError)) {
-            val events = repository.loadEvents()
-                .filter { it.participantStatus != ParticipantStatus.NONE }
-                .mapIndexed { i, e -> e.toUi(i) }
+        loadEvents()
+        subscribeToEvents()
+    }
 
-            if (events.isNullOrEmpty()) {
-                _content.value = listOf(EventItem.EmptyEventUiModel(true), EventItem.EmptyEventUiModel(false))
-            } else {
-                _content.value = events
-            }
+    private fun loadEvents() {
+        viewModelScope.launch(CoroutineExceptionHandler(::onError)) {
+            repository.loadEvents()
         }
+    }
+
+    private fun subscribeToEvents() {
+        repository.getEventsAsFlow()
+            .onEach { events ->
+                val uiEvents = events.filter { it.participantStatus != ParticipantStatus.NONE }
+                    .mapIndexed { i, e -> e.toUi(i) }
+
+                if (uiEvents.isNullOrEmpty()) {
+                    _content.value = listOf(EventItem.EmptyEventUiModel(true), EventItem.EmptyEventUiModel(false))
+                } else {
+                    _content.value = uiEvents
+                }
+            }.launchIn(viewModelScope)
     }
 
     private fun onError(context: CoroutineContext, t: Throwable) {
