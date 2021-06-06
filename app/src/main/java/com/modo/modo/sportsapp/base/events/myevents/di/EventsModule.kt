@@ -1,5 +1,6 @@
 package com.modo.modo.sportsapp.base.events.myevents.di
 
+import com.modo.modo.sportsapp.base.events.admindetail.presentation.AdminDetailViewModel
 import com.modo.modo.sportsapp.base.events.myevents.data.EventsApi
 import com.modo.modo.sportsapp.base.events.myevents.data.EventsRepository
 import com.modo.modo.sportsapp.base.events.myevents.presentation.MyEventsViewModel
@@ -15,4 +16,5 @@ fun myEventsModule() = module {
 
     viewModel { MyEventsViewModel(get()) }
     viewModel { EventsViewModel(get()) }
+    viewModel { (eventId: String) -> AdminDetailViewModel(get(), eventId) }
 }

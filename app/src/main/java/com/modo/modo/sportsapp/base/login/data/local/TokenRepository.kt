@@ -6,6 +6,11 @@ class TokenRepository(
     private val localStorage: SharedPreferences
 ) {
 
+    fun clear() {
+        localStorage.edit().putString(TOKEN_KEY, null).apply()
+        localStorage.edit().putString(USER_KEY, null).apply()
+    }
+
     fun getToken(): String? {
         return localStorage.getString(TOKEN_KEY, null)
     }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="30dp">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/XXLargeText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Название мероприятия" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/MediumText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="12.329.3120" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/NormalText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            tools:text="awwwevw wefwevwwew\nwfefwewevvw\nwefwef\nwefwef" />
+
+        <TextView
+            android:id="@+id/place"
+            style="@style/NormalText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            tools:text="Место дворцовая площадь" />
+
+        <TextView
+            android:id="@+id/checkIn"
+            style="@style/MediumText"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/admin_detail_chekin"
+            android:textColor="@color/colorPsbAccent"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_qr"
+            app:drawableTint="@color/colorPsbAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/place" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

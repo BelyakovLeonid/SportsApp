@@ -54,8 +54,8 @@ class LoginViewModel(
         }
     }
 
-    fun onLogoClicked() {
-        onLogoClicked++
+    fun onLogoClicked(): Boolean {
+        return ++onLogoClicked > 5
     }
 
     private fun onError(context: CoroutineContext, t: Throwable) {

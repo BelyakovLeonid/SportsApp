@@ -75,5 +75,7 @@
     <string name="activity_bicycle">Езда на\nвелосипеде</string>
     <string name="activity_strong">Силовые упражнения</string>
 
+    <string name="you_admin">Вы теперь админ</string>
     <string name="admin_home_title">Мероприятия</string>
+    <string name="admin_detail_chekin">Я на месте, регистрирую!</string>
 </resources>

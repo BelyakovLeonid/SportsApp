@@ -14,6 +14,10 @@ class LoginFlowRepository(
         localStorage.edit().putBoolean(TOKEN_INTERESTS, true).apply()
     }
 
+    fun clear() {
+        localStorage.edit().putBoolean(TOKEN_INTERESTS, false).apply()
+    }
+
     companion object {
         private const val TOKEN_INTERESTS = "interests"
     }

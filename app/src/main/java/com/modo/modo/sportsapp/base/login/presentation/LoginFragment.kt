@@ -9,6 +9,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.modo.modo.sportsapp.R
 import com.modo.modo.sportsapp.user.base.utils.observeFlow
 import com.modo.modo.sportsapp.databinding.FragmentLoginBinding
+import com.modo.modo.sportsapp.user.base.utils.showToast
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -36,7 +37,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             )
         }
         icon.setOnClickListener {
-            viewModel.onLogoClicked()
+            val done = viewModel.onLogoClicked()
+            if (done) {
+                showToast(R.string.you_admin)
+            }
         }
     }
 

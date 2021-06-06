@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.modo.modo.sportsapp.R
+import com.modo.modo.sportsapp.base.events.admindetail.presentation.AdminDetailFragment
 import com.modo.modo.sportsapp.base.events.allevents.presentation.adapter.OffsetItemsDecorator
-import com.modo.modo.sportsapp.base.events.detail.presentation.EventDetailFragment
 import com.modo.modo.sportsapp.base.events.myevents.presentation.adapter.EventsAdapter
 import com.modo.modo.sportsapp.base.events.myevents.presentation.model.EventItem
 import com.modo.modo.sportsapp.databinding.FragmentAdminHomeBinding
@@ -53,8 +53,8 @@ class EventsFragment : Fragment(R.layout.fragment_admin_home) {
     private fun openEventDetail(event: EventItem.EventUiModel) {
         Navigation.findNavController(requireActivity(), R.id.activityContent)
             .navigate(
-                R.id.eventDetailFragment,
-                bundleOf(EventDetailFragment.EVENT_ID_EXTRA to event.id)
+                R.id.adminDetailFragment,
+                bundleOf(AdminDetailFragment.EVENT_ID_EXTRA to event.id)
             )
     }
 }
