@@ -12,7 +12,13 @@
     <fragment
         android:id="@+id/cameraFragment"
         android:name="com.modo.modo.sportsapp.admin.camera.presentation.CameraFragment"
-        android:label="CameraFragment" />
+        android:label="CameraFragment">
+        <action
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            android:id="@+id/action_cameraFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/loginFragment"

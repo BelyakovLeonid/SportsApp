@@ -50,14 +50,19 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
         super.onViewCreated(view, savedInstanceState)
         cameraPermission.launch(Manifest.permission.CAMERA)
         observeFlow(viewModel.personFound) {
-            showPerson(it)
+            binding.progress.animate()
+                .setDuration(300)
+                .alpha(1F)
+                .withEndAction {
+                    binding.progress.postDelayed({ showPerson(it) }, 1300)
+                }
         }
     }
 
     private fun showPerson(person: PersonUiModel) {
         Navigation.findNavController(requireActivity(), R.id.activityContent)
             .navigate(
-                R.id.personFragment,
+                R.id.action_cameraFragment_to_personFragment,
                 bundleOf(PersonFragment.PERSON_EXTRA to person)
             )
     }
