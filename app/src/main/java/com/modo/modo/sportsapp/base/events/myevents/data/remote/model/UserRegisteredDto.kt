@@ -6,6 +6,6 @@ import kotlinx.serialization.Serializable
 data class UserRegisteredDto(
     val approved: Boolean,
     val eventId: String,
-    val userId: String,
+    val userId: String? = null,
     val participationType: String
 )

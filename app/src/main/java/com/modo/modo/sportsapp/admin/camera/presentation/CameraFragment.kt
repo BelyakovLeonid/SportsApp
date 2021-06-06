@@ -50,12 +50,16 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
         super.onViewCreated(view, savedInstanceState)
         cameraPermission.launch(Manifest.permission.CAMERA)
         observeFlow(viewModel.personFound) {
-            binding.progress.animate()
-                .setDuration(300)
-                .alpha(1F)
-                .withEndAction {
-                    binding.progress.postDelayed({ showPerson(it) }, 1300)
-                }
+            if (it != null) {
+                binding.progress.animate()
+                    .setDuration(300)
+                    .alpha(1F)
+                    .withEndAction {
+                        binding.progress.postDelayed({ showPerson(it) }, 1300)
+                    }
+            } else {
+                binding.progress.alpha = 0F
+            }
         }
     }
 
