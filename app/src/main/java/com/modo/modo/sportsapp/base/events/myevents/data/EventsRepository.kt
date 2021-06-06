@@ -37,15 +37,14 @@ class EventsRepository(
         }
         cachedEvents.value = updatedEvents
 
-        //        val userId = tokenRepository.getUserId() ?: return
-        //        api.setParticipateInEvent(
-        //            UserRegisteredDto(
-        //                approved = false,
-        //                eventId = eventId,
-        //                userId = userId,
-        //                participationType = participantStatus.name,
-        //            )
-        //        )
+        val userId = tokenRepository.getUserId() ?: return
+        val request = UserRegisteredDto(
+            approved = false,
+            eventId = eventId,
+            userId = userId,
+            participationType = participantStatus.name,
+        )
+        api.setParticipateInEvent(request)
     }
 
     fun getEvent(eventId: String): Event? {

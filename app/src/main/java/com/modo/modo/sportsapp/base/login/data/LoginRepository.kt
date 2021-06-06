@@ -11,7 +11,7 @@ class LoginRepository(
     suspend fun doLogin(login: String, password: String): Boolean {
         val response = api.login(LoginRequest(login, password))
         response.token?.let { tokenRepository.saveToken(it) }
-        response.employeeCode?.let { tokenRepository.saveUserId(it) }
+        response.id?.let { tokenRepository.saveUserId(it) }
         return response.token.isNullOrEmpty().not()
     }
 }
