@@ -17,8 +17,10 @@ class EventsRepository(
     private var cachedEvents = MutableStateFlow<List<Event>>(emptyList())
 
     suspend fun loadEvents() {
-        val events = api.getEvents()
-        cachedEvents.value = events.map { it.toDomain() }
+        if (cachedEvents.value.isNullOrEmpty()) {
+            val events = api.getEvents()
+            cachedEvents.value = events.map { it.toDomain() }
+        }
     }
 
     fun getEventsAsFlow(): Flow<List<Event>> {
@@ -26,18 +28,7 @@ class EventsRepository(
     }
 
     suspend fun setParticipateInEvent(eventId: String, participantStatus: ParticipantStatus) {
-        val userId = tokenRepository.getUserId() ?: return
-        api.setParticipateInEvent(
-            UserRegisteredDto(
-                approved = false,
-                eventId = eventId,
-                userId = userId,
-                participationType = participantStatus.name,
-            )
-        )
-
-        val updatedEvents = cachedEvents.value.toMutableList()
-        updatedEvents.map {
+        val updatedEvents = cachedEvents.value.map {
             if (it.id == eventId) {
                 it.copy(participantStatus = participantStatus)
             } else {
@@ -45,6 +36,16 @@ class EventsRepository(
             }
         }
         cachedEvents.value = updatedEvents
+
+        //        val userId = tokenRepository.getUserId() ?: return
+        //        api.setParticipateInEvent(
+        //            UserRegisteredDto(
+        //                approved = false,
+        //                eventId = eventId,
+        //                userId = userId,
+        //                participationType = participantStatus.name,
+        //            )
+        //        )
     }
 
     fun getEvent(eventId: String): Event? {

@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorTransparent"
             android:imeOptions="actionNext"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>

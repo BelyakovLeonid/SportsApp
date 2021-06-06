@@ -48,6 +48,9 @@ class EventDetailFragment : Fragment(R.layout.fragment_my_event_detail) {
         buttonCancel.setOnClickListener {
             viewModel.changeStatus(ParticipantStatus.NONE)
         }
+        close.setOnClickListener {
+            Navigation.findNavController(requireActivity(), R.id.activityContent).navigateUp()
+        }
     }
 
     private fun observeData() = with(binding) {
