@@ -25,6 +25,9 @@ class LoginViewModel(
     private val _loginSuccess = MutableStateFlow<Boolean?>(null)
     val loginSuccess: Flow<Boolean> = _loginSuccess.filterNotNull()
 
+    //в данный момент вход под админом реализован таким образом
+    private var onLogoClicked = 0
+
     fun checkLoggedInState() {
         if (tokenRepository.getToken() != null) {
             val destId = if (flowRepository.hasInterestsShown()) {
@@ -41,14 +44,18 @@ class LoginViewModel(
             val isSuccess = loginRepository.doLogin(login, pass)
             _loginSuccess.value = isSuccess
             if (isSuccess) {
-                val destId = if (flowRepository.hasInterestsShown()) {
-                    R.id.tabsFragment
-                } else {
-                    R.id.interestsFragment
+                val destId = when {
+                    onLogoClicked > 5 -> R.id.eventsFragment
+                    flowRepository.hasInterestsShown() -> R.id.tabsFragment
+                    else -> R.id.interestsFragment
                 }
                 _navigationCommands.emit(destId)
             }
         }
+    }
+
+    fun onLogoClicked() {
+        onLogoClicked++
     }
 
     private fun onError(context: CoroutineContext, t: Throwable) {

@@ -35,6 +35,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 pass = passwordInputText.text.toString()
             )
         }
+        icon.setOnClickListener {
+            viewModel.onLogoClicked()
+        }
     }
 
     private fun observeData() {

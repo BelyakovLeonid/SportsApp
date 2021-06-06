@@ -74,4 +74,6 @@
     <string name="activity_run">Бег</string>
     <string name="activity_bicycle">Езда на\nвелосипеде</string>
     <string name="activity_strong">Силовые упражнения</string>
+
+    <string name="admin_home_title">Мероприятия</string>
 </resources>
