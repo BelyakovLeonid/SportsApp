@@ -43,4 +43,8 @@
         android:id="@+id/adminDetailFragment"
         android:name="com.modo.modo.sportsapp.base.events.admindetail.presentation.AdminDetailFragment"
         android:label="AdminDetailFragment" />
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.modo.modo.sportsapp.admin.personfound.PersonFragment"
+        android:label="PersonFragment" />
 </navigation>

@@ -78,4 +78,5 @@
     <string name="you_admin">Вы теперь админ</string>
     <string name="admin_home_title">Мероприятия</string>
     <string name="admin_detail_chekin">Я на месте, регистрирую!</string>
+    <string name="admin_person">Об участнике</string>
 </resources>

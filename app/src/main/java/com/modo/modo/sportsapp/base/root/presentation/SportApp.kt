@@ -1,6 +1,7 @@
 package com.modo.modo.sportsapp.base.root.presentation
 
 import android.app.Application
+import com.modo.modo.sportsapp.admin.camera.di.cameraModule
 import com.modo.modo.sportsapp.user.base.di.baseModule
 import com.modo.modo.sportsapp.base.events.allevents.di.allEventsModule
 import com.modo.modo.sportsapp.base.events.detail.di.eventsModule
@@ -23,6 +24,7 @@ class SportApp : Application() {
                 myEventsModule(),
                 eventsModule(),
                 allEventsModule(),
+                cameraModule(),
                 profileModule(),
                 qrModule()
             )

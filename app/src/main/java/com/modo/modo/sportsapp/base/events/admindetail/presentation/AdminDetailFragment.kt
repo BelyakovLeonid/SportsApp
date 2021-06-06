@@ -9,6 +9,7 @@ import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import com.modo.modo.sportsapp.R
+import com.modo.modo.sportsapp.admin.camera.presentation.CameraFragment
 import com.modo.modo.sportsapp.user.base.utils.observeFlow
 import com.modo.modo.sportsapp.databinding.FragmentMyEventDetailBinding
 import com.modo.modo.sportsapp.base.events.myevents.presentation.model.ParticipantStatus
@@ -35,8 +36,8 @@ class AdminDetailFragment : Fragment(R.layout.fragment_admin_detail) {
         checkIn.setOnClickListener {
             Navigation.findNavController(requireActivity(), R.id.activityContent)
                 .navigate(
-                    R.id.qrFragment,
-                    bundleOf(QrFragment.EVENT_ID_EXTRA to arguments?.getString(EVENT_ID_EXTRA))
+                    R.id.cameraFragment,
+                    bundleOf(CameraFragment.EVENT_ID_EXTRA to arguments?.getString(EVENT_ID_EXTRA))
                 )
         }
     }
