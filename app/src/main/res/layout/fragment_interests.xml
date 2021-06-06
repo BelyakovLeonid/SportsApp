@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/XXLargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interests_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleSportsmen"
+            style="@style/LargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/interests_sportsmen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/sportsmanChips"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleSportsmen">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHokey"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_hokey" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSoccer"
+                style="@style/ChipStyle"
+                android:layout_height="@dimen/chip_height"
+                android:layout_width="wrap_content"
+                android:text="@string/interests_soccer" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTennis"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_tennis" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStrong"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_strong" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRunning"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_running" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVolley"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_volleyball" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBasket"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_basketball" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBicycle"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_bicycle" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStretching"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_stretching" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/titleFan"
+            style="@style/LargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/interests_fan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sportsmanChips" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/fanChips"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleFan">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHokeyFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_hokey" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSoccerFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_soccer" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTennisFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_tennis" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStrongFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_strong" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRunningFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_running" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVolleyFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_volleyball" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBasketFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_basketball" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBicycleFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_bicycle" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStretchingFan"
+                style="@style/ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/interests_stretching" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/NormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/interests_desc"
+            app:layout_constraintTop_toBottomOf="@id/fanChips"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/buttonNext"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interests_next"
+            android:padding="5dp"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintVertical_bias="1"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab1Fragment"
+        android:title="@string/tab_my_events" />
+
+    <item
+        android:id="@+id/tab2Fragment"
+        android:title="@string/tab_activity" />
+
+    <item
+        android:id="@+id/tab3Fragment"
+        android:title="@string/tab_news" />
+
+    <item
+        android:id="@+id/tab4Fragment"
+        android:title="@string/tab_gifts" />
+
+    <item
+        android:id="@+id/tab5Fragment"
+        android:title="@string/tab_profile" />
+</menu>

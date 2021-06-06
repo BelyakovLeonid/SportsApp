@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">SportsApp</string>
+
+    <string name="denied_toast">Приложению необходимо данное разрешение!</string>
+    <string name="interests_fan">Как болельщик</string>
+    <string name="interests_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
+    <string name="interests_next">Далее ¬</string>
+    <string name="interests_tennis">Теннис</string>
+    <string name="interests_soccer">Футбол</string>
+    <string name="interests_hokey">Хоккей</string>
+    <string name="interests_basketball">Баскетбол</string>
+    <string name="interests_volleyball">Волейбол</string>
+    <string name="interests_running">Бег</string>
+    <string name="interests_bicycle">Велоспорт</string>
+    <string name="interests_strong">Силовой спорт</string>
+    <string name="interests_stretching">Стретчинг</string>
+    <string name="interests_sportsmen">Как спортсмен</string>
+    <string name="interests_title">Мои интересы</string>
+
+    <string name="text_forgot">Забыли пароль?</string>
+    <string name="text_error">Проверьте правильность данных!</string>
+    <string name="hint_id">Ваш табельный номер</string>
+    <string name="hint_password">Пароль</string>
+    <string name="button_next">Далее ¬</string>
+
+    <string name="login_label">CПОРТ</string>
+    <string name="login_title">Добро пожаловать\nв ПСБ Спорт!</string>
+    <string name="login_next">Войти ¬</string>
+
+    <string name="gadgets_title">Подключите ваше умное устройство к приложению</string>
+    <string name="gadgets_subtitle">Подключение умного устройства позволит начислять награждения за вашу физическую активность</string>
+    <string name="gadgets_button">Подключить!</string>
+    <string name="gadgets_desc">Выбрать/изменить интересы можно потом в личном кабинете приложения</string>
+    <string name="gadgets_next">Далее ¬</string>
+    <string name="tab_my_events">Планы</string>
+    <string name="tab_activity">События</string>
+    <string name="tab_news">Лента</string>
+    <string name="tab_gifts">Призы</string>
+    <string name="tab_profile">ЛК</string>
+
+    <string name="my_events_search">Поиск</string>
+    <string name="my_events_done">Выполненные</string>
+    <string name="my_events_calendar">Календарь</string>
+    <string name="my_events_fav">Избранное</string>
+    <string name="my_events_nearest">Ближайшие события</string>
+    <string name="my_events_next">Будущие мероприятия</string>
+
+    <string name="events_open">Регистрация открыта!</string>
+    <string name="events_more"><u>Подробнее</u></string>
+    <string name="events_empty">Тут пока пусто, добавляй события на вкладке <b>События</b></string>
+    <string name="events_role_sport">ваша роль <b>спортсмен</b></string>
+    <string name="events_role_fan">ваша роль <b>болельщик</b></string>
+
+    <string name="detail_chekin">Я на месте, регистрируюсь!</string>
+    <string name="detail_register">Принять участие!</string>
+    <string name="detail_register_until">регистрация начнётся за 1 час</string>
+    <string name="detail_you_are_cancel">Отменить своё участие</string>
+    <string name="detail_you_are_sport">Вы зарегистрированны как <b>спортсмен</b></string>
+    <string name="detail_you_are_fun">Вы зарегистрированны как <b>болельщик</b></string>
+    <string name="detail_plan">Запаланировать участие как</string>
+    <string name="detail_sport">Спортсмен</string>
+    <string name="detail_fun">Болельщик</string>
+    <string name="detail_sport_points">100 пульса</string>
+    <string name="detail_fun_points">50 пульса</string>
+
+    <string name="qr_title">Сканирование QR-кода</string>
+
+    <string name="events_title">Мероприятия</string>
+    <string name="events_show_all"><u>Показать все</u></string>
+    <string name="events_activities">Активности</string>
+    <string name="events_are_you_running">Вы сейчас занимаетесь бегом?</string>
+    <string name="events_yes">Всё верно!</string>
+    <string name="events_no">Нет, не угадали, выберу другую активность</string>
+    <string name="activity_run">Бег</string>
+    <string name="activity_bicycle">Езда на\nвелосипеде</string>
+    <string name="activity_strong">Силовые упражнения</string>
 </resources>
